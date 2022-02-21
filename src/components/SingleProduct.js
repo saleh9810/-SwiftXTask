@@ -133,6 +133,10 @@ const Product = ({ chosenCurrency, addOnCart }) => {
               >
                 ADD TO CART
               </button>
+              <p className="mt-3">
+                {" "}
+                {data.product.description.replace(/<[^>]+>/g, "")}
+              </p>
             </div>
           </div>
         </div>
