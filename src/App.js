@@ -5,11 +5,10 @@ import Home from "./views/home";
 import Clothes from "./views/clothes";
 import Tech from "./views/tech";
 
-import SingleProduct from "./components/SingleProduct";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CartPage from "./views/cartPage";
 import CartOverlay from "./components/CartOverlay";
+import Product from "./views/product";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -110,10 +109,7 @@ function App() {
           <Route
             path="/product:id"
             element={
-              <SingleProduct
-                addOnCart={addOnCart}
-                chosenCurrency={chosenCurrency}
-              />
+              <Product addOnCart={addOnCart} chosenCurrency={chosenCurrency} />
             }
           />
           <Route

@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { useParams } from "react-router-dom";
 
-const Product = ({ chosenCurrency, addOnCart }) => {
+const SingleProduct = ({ chosenCurrency, addOnCart }) => {
   let params = useParams();
-
-  console.log(params.id);
 
   const GET_PRODUCT_BY_ID = gql`
     query GetProductById {
@@ -145,4 +143,4 @@ const Product = ({ chosenCurrency, addOnCart }) => {
   );
 };
 
-export default Product;
+export default SingleProduct;
